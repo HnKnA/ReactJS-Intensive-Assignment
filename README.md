@@ -36,7 +36,7 @@ Access `http://localhost:3000/` to open the app.
 
 - Or I've prepared some privileged username such as `spring`, `summer`, `autumn`, `winter`. You can create new account with these username to access the `/user` vs `/order` page.
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/25b9641f-ee79-497e-9466-77dd0c51664d)
 
 ### Search bar:
 - Product's search bar is unavailable because of failing to access `/api/shop/product/search` endpoint.
@@ -48,7 +48,7 @@ Access `http://localhost:3000/` to open the app.
 
 - I will update this functionality as soon as the user's role is published.
 
-![alt text](image-1.png)
+![image](https://github.com/user-attachments/assets/4cbd2afa-85da-40a2-87c6-9458dc10f522)
 
 ### Order page:
 - For the time being, every user is counted as "normal user" so each person can only access and complete their orders. But as we are implementing the "fake admin" privilege, only the username in this list can acccess the page and see their orders [`tuan`, `spring`, `summer`, `autumn`, `winter`].
@@ -57,24 +57,24 @@ Access `http://localhost:3000/` to open the app.
 
 ## Services:
 ### Product page:
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/f4715b4a-e327-4765-a4d9-0b60f25583be)
 - Search bar is unavailable.
 - Filter products based on their category (Javascript implemented).
 - Create Order.
 - Add, View, Edit, Delete (Product).
 
 ### Order page (fake admin privilege):
-![alt text](image-3.png)
+![image](https://github.com/user-attachments/assets/ac6a3884-2ce0-405a-9218-9b5c364416b4)
 - Complete pending orders.
 - View personal orders.
 - Can not view all orders of all users because there is no admin at the moment.
 
 ### User page (fake admin privilege): 
-![alt text](image-4.png)
+![image](https://github.com/user-attachments/assets/49819f8a-2819-4886-bd2d-91f07983f3e8)
 - Search/Filter users
 
 ### Account page (click on your username on the header):
-![alt text](image-5.png)
+![image](https://github.com/user-attachments/assets/4a76292b-9059-4e57-945c-90ca9df88ed6)
 - Readonly form
 
 ### Register, Login, Verify.
