@@ -34,6 +34,8 @@ Access the application at `http://localhost:3000/`.
 
 - Access as "fake admin" by log in with ***username:*** `tuan` and ***password:*** `Anhtuan@123456`.
 
+- Access as "normal user" by log in with ***username:*** `tuan2` and ***password:*** `Anhtuan@123456`.
+
 - Or I've prepared some privileged username such as `spring`, `summer`, `autumn`, `winter`. You can create new account with any of these usernames to access the `/user` vs `/order` pages.
 
 ![image](https://github.com/user-attachments/assets/25b9641f-ee79-497e-9466-77dd0c51664d)
