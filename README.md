@@ -1,46 +1,82 @@
-# Getting Started with Create React App
+# How to set up and run MyShop Application
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Access the application by using public hosted link
 
-In the project directory, you can run:
+Open the link on your web browser:
+### `https://at-reactjs-intensive-1b521d331384.herokuapp.com`
 
-### `npm start`
+## Run the app locally
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone the code from the Github's repository with:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `git clone https://github.com/HnKnA/ReactJS-Intensive-Assignment.git`
 
-### `npm test`
+Install necessary dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `yarn install`
 
-### `npm run build`
+Or you can use `npm install` if your package manager is `npm`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Launches the application:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `yarn dev`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Or `npm run dev`.
 
-### `npm run eject`
+Access `http://localhost:3000/` to open the app.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Note:
+### ProtectedRoute:
+- User currently do not have `role` field, so `ProtectedRoute` will use username to separate each role. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Access as "fake admin" by log in with ***username:*** `tuan` and ***password:*** `Anhtuan@123456`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Or I've prepared some privileged username such as `spring`, `summer`, `autumn`, `winter`. You can create new account with these username to access the `/user` vs `/order` page.
 
-## Learn More
+![alt text](image.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Search bar:
+- Product's search bar is unavailable because of failing to access `/api/shop/product/search` endpoint.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- User list will be fetch by calling `/api/user/search` with `searchKey` "a" to return all available users because endpoint to GET all users is currently unavailable. After that, you can use the search bar on user's page normally.
+
+### Add or Update image field:
+- Only the CREATE product api is available at the moment, and it do not affect the product's list after successfully creating. So you can add an arbitrary string to replace to field in the form. 
+
+- I will update this functionality as soon as the user's role is published.
+
+![alt text](image-1.png)
+
+### Order page:
+- For the time being, every user is counted as "normal user" so each person can only access and complete their orders. But as we are implementing the "fake admin" privilege, only the username in this list can acccess the page and see their orders [`tuan`, `spring`, `summer`, `autumn`, `winter`].
+
+- Username outside of the list can not access /order page normally.
+
+## Services:
+### Product page:
+![alt text](image-2.png)
+- Search bar is unavailable.
+- Filter products based on their category (Javascript implemented).
+- Create Order.
+- Add, View, Edit, Delete (Product).
+
+### Order page (fake admin privilege):
+![alt text](image-3.png)
+- Complete pending orders.
+- View personal orders.
+- Can not view all orders of all users because there is no admin at the moment.
+
+### User page (fake admin privilege): 
+![alt text](image-4.png)
+- Search/Filter users
+
+### Account page (click on your username on the header):
+![alt text](image-5.png)
+- Readonly form
+
+### Register, Login, Verify.
+### Light/Dark theme (sun icon on the header). 
+### Log out.

@@ -17,7 +17,13 @@ function AppRoutes() {
       <Route path="/" element={<Login />} />
       <Route path="/verify" element={<Verify />} />
       <Route path="/register" element={<Register />} />
-      <Route element={<ProtectedRoutes allowedRole={["tuan"]} />}>
+      <Route
+        element={
+          <ProtectedRoutes
+            allowedRole={["tuan", "spring", "summer", "autumn", "winter"]}
+          />
+        }
+      >
         <Route path="/user" element={<User />} />
         <Route path="/order" element={<Order />} />
       </Route>

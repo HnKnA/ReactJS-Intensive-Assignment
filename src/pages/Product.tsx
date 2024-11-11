@@ -438,7 +438,11 @@ function Product() {
                   </div>
                   <div className="form-group">
                     <label>Image</label>
-                    <Field name="img" className="form-control" />
+                    <Field
+                      name="img"
+                      className="form-control"
+                      placeholder="File URL, see the guide on github link for more information"
+                    />
                     <ErrorMessage
                       name="img"
                       component="div"
@@ -631,7 +635,11 @@ function Product() {
                 </div>
                 <div className="form-group">
                   <label>Image</label>
-                  <Field name="img" className="form-control" />
+                  <Field
+                    name="img"
+                    className="form-control"
+                    placeholder="File URL, see the guide on github link for more information"
+                  />
                   <ErrorMessage
                     name="img"
                     component="div"
