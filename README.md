@@ -2,14 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Access the application by using public hosted link
+## Access the application Using Public Hosted Link
 
-Open the link on your web browser:
+Open the application in your web browser:
 ### `https://at-reactjs-intensive-1b521d331384.herokuapp.com`
 
 ## Run the app locally
 
-Clone the code from the Github's repository with:
+Clone the code from GitHub repository:
 
 ### `git clone https://github.com/HnKnA/ReactJS-Intensive-Assignment.git`
 
@@ -17,43 +17,43 @@ Install necessary dependencies:
 
 ### `yarn install`
 
-Or you can use `npm install` if your package manager is `npm`.
+Or use `npm install` if your package manager is `npm`.
 
-Launches the application:
+Launch the application:
 
 ### `yarn dev`
 
 Or `npm run dev`.
 
-Access `http://localhost:3000/` to open the app.
+Access the application at `http://localhost:3000/`.
 
 
 ## Note:
 ### ProtectedRoute:
-- User currently do not have `role` field, so `ProtectedRoute` will use username to separate each role. 
+- The `role` field is not yet available for users, so `ProtectedRoute` will use username to determine each role.
 
 - Access as "fake admin" by log in with ***username:*** `tuan` and ***password:*** `Anhtuan@123456`.
 
-- Or I've prepared some privileged username such as `spring`, `summer`, `autumn`, `winter`. You can create new account with these username to access the `/user` vs `/order` page.
+- Or I've prepared some privileged username such as `spring`, `summer`, `autumn`, `winter`. You can create new account with any of these usernames to access the `/user` vs `/order` pages.
 
 ![image](https://github.com/user-attachments/assets/25b9641f-ee79-497e-9466-77dd0c51664d)
 
 ### Search bar:
-- Product's search bar is unavailable because of failing to access `/api/shop/product/search` endpoint.
+- Product's search bar is unavailable due to a failure to access `/api/shop/product/search` endpoint.
 
-- User list will be fetch by calling `/api/user/search` with `searchKey` "a" to return all available users because endpoint to GET all users is currently unavailable. After that, you can use the search bar on user's page normally.
+- The user list is fetched by calling `/api/user/search` with `searchKey` "a" to retrieve all available users, as the endpoint to GET all users is currently unavailable. After that, you can use the search bar on user's page as normal.
 
 ### Add or Update image field:
-- Only the CREATE product api is available at the moment, and it do not affect the product's list after successfully creating. So you can add an arbitrary string to replace to field in the form. 
+- Only the CREATE product API is available at the moment, and it does not affect the product list after successfully creating a product. Therefore, you can add an arbitrary string to replace this field in the form.
 
-- I will update this functionality as soon as the user's role is published.
+- This functionality will be updated as soon as the user's role feature is implemented.
 
 ![image](https://github.com/user-attachments/assets/4cbd2afa-85da-40a2-87c6-9458dc10f522)
 
 ### Order page:
-- For the time being, every user is counted as "normal user" so each person can only access and complete their orders. But as we are implementing the "fake admin" privilege, only the username in this list can acccess the page and see their orders [`tuan`, `spring`, `summer`, `autumn`, `winter`].
+- For the time being, every user is treated as "normal user", meaning each person can only access and complete their own orders. However, with "fake admin" privilege in place, only the following username can acccess the page and view their orders [`tuan`, `spring`, `summer`, `autumn`, `winter`].
 
-- Username outside of the list can not access /order page normally.
+- Usernames outside of this list can not access /order page normally.
 
 ## Services:
 ### Product page:
@@ -80,3 +80,5 @@ Access `http://localhost:3000/` to open the app.
 ### Register, Login, Verify.
 ### Light/Dark theme (sun icon on the header). 
 ### Log out.
+
+## I will also update many comments later for the ease or reading code.
